@@ -191,14 +191,14 @@ export default function SearchClient() {
   return (
     <section className="searchExperience" aria-label="Search the knowledge platform">
       <div className="featuredSkills" aria-label="Popular searches">
-        <span>Popular:</span>
+        <span className="popularLabel">Popular</span>
         {featuredSearches.map((item) => (
           <button key={item.label} type="button" onClick={() => runSearch(item.query)}>{item.label}</button>
         ))}
       </div>
 
       <form className="searchBox" onSubmit={handleSubmit} role="search">
-        <span className="searchIcon" aria-hidden="true">⌕</span>
+        <span className="searchIcon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg></span>
         <input
           ref={inputRef}
           aria-label="Search the knowledge platform"
@@ -211,7 +211,7 @@ export default function SearchClient() {
           onKeyDown={handleKeyDown}
         />
         {query && <button className="clearButton" type="button" onClick={clearSearch} aria-label="Clear search">×</button>}
-        <button className="searchButton" type="submit">Search</button>
+        <button className="searchButton" type="submit"><span>Ask BAS AI</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3-6-7-1Z" /></svg></button>
       </form>
       <p className="searchHint">Press Enter to search. Use ↑ and ↓ to move through suggestions. Press Esc to clear.</p>
 
@@ -219,9 +219,9 @@ export default function SearchClient() {
         <div className="emptyState">
           <div className="emptyStateHeader">
             <div>
-              <span className="sectionKicker">Need inspiration?</span>
-              <h2>Try a common BAS question</h2>
-              <p>Choose a topic or select a realistic question to see which approved documentation applies.</p>
+              <span className="sectionKicker">PROMPT LIBRARY</span>
+              <h2>What can I help you find?</h2>
+              <p>Choose a topic or start with one of these questions. Each search connects you to the most relevant internal knowledge.</p>
             </div>
           </div>
 
@@ -253,7 +253,7 @@ export default function SearchClient() {
               >
                 <span>{suggestion.topic}</span>
                 <strong>{suggestion.question}</strong>
-                <small>Search the knowledge base →</small>
+                <small>Ask BAS AI <span>↗</span></small>
               </button>
             ))}
           </div>
