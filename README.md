@@ -1,4 +1,4 @@
-# FBS AI Knowledge Platform MVP
+# FBS IDX AI Knowledge Platform MVP
 
 A deployable Next.js front end for the FBS IDX AI knowledge base.
 
