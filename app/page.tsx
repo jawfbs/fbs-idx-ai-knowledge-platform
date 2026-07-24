@@ -1,5 +1,6 @@
 import SearchClient from "../components/SearchClient";
 import { knowledgeItems, metrics } from "../lib/data";
+import WelcomeVideo from "../components/WelcomeVideo";
 
 const mostUsed = knowledgeItems.filter((item) => item.type === "Skill").slice(0, 3);
 const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 4);
@@ -7,11 +8,23 @@ const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.upda
 export default function Home() {
   return (
     <main>
-      <header className="hero">
-        <div className="eyebrow">FBS INTERNAL</div>
-        <h1>AI Knowledge Platform</h1>
-        <p>One approved source of truth for IDX sales, support, MLS compliance, Website Concierge, Spark API, and AI-assisted work.</p>
-      </header>
+
+
+<header className="hero">
+  <div className="heroTop">
+    <div className="eyebrow">FBS INTERNAL</div>
+    <WelcomeVideo />
+  </div>
+
+  <h1>AI Knowledge Platform</h1>
+
+  <p>
+    One approved source of truth for IDX sales, support, MLS compliance,
+    Website Concierge, Spark API, and AI-assisted work.
+  </p>
+</header>
+
+
 
       <SearchClient />
 
