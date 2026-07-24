@@ -1,6 +1,7 @@
 import PlatformControls from "../components/PlatformControls";
 import ResourceShelf from "../components/ResourceShelf";
 import SearchClient from "../components/SearchClient";
+import SearchLauncher from "../components/SearchLauncher";
 import WelcomeVideo from "../components/WelcomeVideo";
 import { knowledgeItems, metrics } from "../lib/data";
 
@@ -18,11 +19,7 @@ export default function Home() {
           <span className="brandMark">F</span>
           <span><strong>BAS AI</strong><small>Knowledge Platform</small></span>
         </a>
-        <div className="topbarCenter">
-          <button type="button" className="launcherButton" onClick={() => window.dispatchEvent(new CustomEvent("run-platform-search", { detail: "IDX requirements MLS" }))}>
-            <span>Search knowledge</span><kbd>⌘ K</kbd>
-          </button>
-        </div>
+        <div className="topbarCenter"><SearchLauncher /></div>
         <div className="topbarActions">
           <WelcomeVideo />
           <PlatformControls />
@@ -69,11 +66,7 @@ export default function Home() {
         </div>
         <div className="panel">
           <div className="panelHeader"><span className="panelIcon">◈</span><div><span>LEARNING</span><h2>Case study library</h2></div></div>
-          {[
-            ["Brokerage mergers", "Complex account scenarios"],
-            ["MLS migrations", "Data and authorization changes"],
-            ["Domain changes", "Website transition guidance"]
-          ].map(([title, description]) => <a href="https://docs.google.com/document/d/1rzURM0NS3szZAQykG-z7HZytzu3hpPdw7ExKVjgl2Wg" target="_blank" rel="noreferrer" key={title}><span>{title}<small>{description}</small></span><em>Draft</em></a>)}
+          {[["Brokerage mergers", "Complex account scenarios"], ["MLS migrations", "Data and authorization changes"], ["Domain changes", "Website transition guidance"]].map(([title, description]) => <a href="https://docs.google.com/document/d/1rzURM0NS3szZAQykG-z7HZytzu3hpPdw7ExKVjgl2Wg" target="_blank" rel="noreferrer" key={title}><span>{title}<small>{description}</small></span><em>Draft</em></a>)}
         </div>
       </section>
 
