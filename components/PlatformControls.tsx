@@ -77,13 +77,13 @@ export default function PlatformControls() {
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.12 2.12-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.55V20.3h-3v-.09a1.7 1.7 0 0 0-1.03-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06-2.12-2.12.06-.06A1.7 1.7 0 0 0 7 15a1.7 1.7 0 0 0-1.55-1.03H5.3v-3h.15A1.7 1.7 0 0 0 7 9.94a1.7 1.7 0 0 0-.34-1.88L6.6 8l2.12-2.12.06.06a1.7 1.7 0 0 0 1.88.34A1.7 1.7 0 0 0 11.7 4.7V4.6h3v.1a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06L19.8 8l-.06.06a1.7 1.7 0 0 0-.34 1.88 1.7 1.7 0 0 0 1.55 1.03h.15v3h-.15A1.7 1.7 0 0 0 19.4 15Z"/></svg>
         </button>
         {settingsOpen && (
-          <div className="settingsMenu" role="menu">
-            <button type="button" onClick={() => window.dispatchEvent(new Event("open-welcome-video"))}><span>▶</span><b>Watch Intro</b></button>
-            <button type="button" onClick={() => { setPaletteOpen(true); setSettingsOpen(false); }}><span>⌘</span><b>Command Palette</b><kbd>⌘K</kbd></button>
-            <button type="button" onClick={() => { window.dispatchEvent(new Event("focus-platform-search")); setSettingsOpen(false); }}><span>⌕</span><b>Focus Search</b><kbd>/</kbd></button>
-            <button type="button" onClick={toggleTheme}><span>◐</span><b>Toggle Theme</b></button>
-            <a href={GUIDE_URL} target="_blank" rel="noreferrer"><span>?</span><b>Platform Guide</b><i>↗</i></a>
-            <button type="button" onClick={clearHistory}><span>↻</span><b>Clear Local History</b></button>
+          <div className="settingsMenu" role="menu" aria-label="Platform actions">
+            <button className="settingsAction" type="button" aria-label="Watch Intro" data-label="Watch Intro" onClick={() => window.dispatchEvent(new Event("open-welcome-video"))}><span aria-hidden="true">▶</span></button>
+            <button className="settingsAction" type="button" aria-label="Command Palette" data-label="Command Palette · ⌘K" onClick={() => { setPaletteOpen(true); setSettingsOpen(false); }}><span aria-hidden="true">⌘</span></button>
+            <button className="settingsAction" type="button" aria-label="Focus Search" data-label="Focus Search · /" onClick={() => { window.dispatchEvent(new Event("focus-platform-search")); setSettingsOpen(false); }}><span aria-hidden="true">⌕</span></button>
+            <button className="settingsAction" type="button" aria-label="Toggle Theme" data-label="Toggle Theme" onClick={toggleTheme}><span aria-hidden="true">◐</span></button>
+            <a className="settingsAction" href={GUIDE_URL} target="_blank" rel="noreferrer" aria-label="Open Platform Guide" data-label="Platform Guide"><span aria-hidden="true">?</span></a>
+            <button className="settingsAction settingsActionDanger" type="button" aria-label="Clear Local History" data-label="Clear Local History" onClick={clearHistory}><span aria-hidden="true">↻</span></button>
           </div>
         )}
       </div>
