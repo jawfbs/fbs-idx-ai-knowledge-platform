@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
-  const username = process.env.SITE_USERNAME;
-  const password = process.env.SITE_PASSWORD;
+  const sitePassword = process.env.SITE_PASSWORD;
 
-  if (!username || !password) {
+  if (!sitePassword) {
     return new NextResponse(
-      "Site authentication is not configured.",
+      "SITE_PASSWORD environment variable is not configured.",
       { status: 500 }
     );
   }
@@ -14,24 +13,18 @@ export function middleware(request: NextRequest) {
   const authorization = request.headers.get("authorization");
 
   if (authorization) {
-    const [scheme, encodedCredentials] = authorization.split(" ");
+    const [scheme, encoded] = authorization.split(" ");
 
-    if (scheme === "Basic" && encodedCredentials) {
+    if (scheme === "Basic" && encoded) {
       try {
-        const decodedCredentials = atob(encodedCredentials);
-        const separatorIndex = decodedCredentials.indexOf(":");
+        const decoded = atob(encoded);
+        const enteredPassword = decoded.split(":")[1];
 
-        const enteredUsername = decodedCredentials.slice(0, separatorIndex);
-        const enteredPassword = decodedCredentials.slice(separatorIndex + 1);
-
-        if (
-          enteredUsername === username &&
-          enteredPassword === password
-        ) {
+        if (enteredPassword === sitePassword) {
           return NextResponse.next();
         }
       } catch {
-        // Invalid authorization header; show the login prompt again.
+        // Ignore malformed credentials
       }
     }
   }
@@ -47,6 +40,9 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt).*)",
+    /*
+     * Protect everything except Next.js internals and common static assets.
+     */
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
   ],
 };
