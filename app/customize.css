@@ -1,0 +1,189 @@
+.settingsPanelHeader {
+  padding: 2px 2px 16px;
+  border-bottom: 0;
+}
+
+.settingsPanelHeader strong {
+  font-size: 20px;
+  letter-spacing: -.025em;
+}
+
+.settingsPanelHeader small {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.settingsClose {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--surface-subtle);
+}
+
+.settingsSectionTitle {
+  margin: 20px 2px 9px;
+  font-size: 9px;
+  letter-spacing: .16em;
+}
+
+.settingsPanel .settingsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  padding: 0;
+}
+
+.settingsPanel .settingsRow {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: 17px;
+  background: color-mix(in srgb, var(--surface-subtle) 72%, transparent);
+  color: var(--text-primary);
+  text-align: left;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+.settingsPanel .settingsRow:hover,
+.settingsPanel .settingsRow:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border-soft));
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface-solid));
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .08);
+}
+
+.settingsPanel .settingsIcon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.settingsPanel .settingsIcon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.settingsPanel .settingsCopy {
+  width: 100%;
+  min-width: 0;
+}
+
+.settingsPanel .settingsCopy strong {
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.settingsPanel .settingsCopy small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.settingsPanel .settingsMeta {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.settingsPanel .settingsRow {
+  position: relative;
+}
+
+.settingsPanel .settingsRow:has(.themeSwitch) {
+  grid-column: 1 / -1;
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: 38px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--surface-subtle) 78%, transparent);
+}
+
+.settingsPanel .settingsRow:has(.themeSwitch) .settingsCopy small {
+  margin-top: 2px;
+}
+
+.settingsPanel .themeSwitch {
+  width: 46px;
+  height: 26px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text-muted) 30%, transparent);
+  cursor: pointer;
+}
+
+.settingsPanel .themeSwitch::after {
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.settingsPanel .themeSwitch[aria-checked="true"] {
+  background: var(--accent);
+}
+
+.settingsPanel .themeSwitch[aria-checked="true"]::after {
+  transform: translateX(20px);
+}
+
+.settingsPanel .settingsDanger {
+  border-color: color-mix(in srgb, #d13b4f 18%, var(--border-soft));
+  background: color-mix(in srgb, #d13b4f 5%, var(--surface-subtle));
+}
+
+.settingsPanel .settingsDanger .settingsIcon {
+  background: color-mix(in srgb, #d13b4f 11%, transparent);
+  color: #d13b4f;
+}
+
+.settingsPanel .settingsDanger:hover {
+  border-color: color-mix(in srgb, #d13b4f 36%, var(--border-soft));
+  background: color-mix(in srgb, #d13b4f 8%, var(--surface-solid));
+}
+
+.settingsPanel .settingsFooter {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .settingsPanel .settingsList {
+    grid-template-columns: 1fr;
+  }
+
+  .settingsPanel .settingsRow,
+  .settingsPanel .settingsRow:has(.themeSwitch) {
+    grid-column: auto;
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .settingsPanel .settingsMeta {
+    position: static;
+  }
+}
