@@ -5,9 +5,6 @@ import { createPortal } from "react-dom";
 
 const STORAGE_KEY = "hideKnowledgePlatformWelcomeVideo";
 
-const VIDEO_URL =
-  "https://docs.google.com/videos/d/1E7uJrN4igWPchDzfqcPprOGslr2hDXVcAv5pV7HiIRE/preview";
-
 export default function WelcomeVideo() {
   const [isOpen, setIsOpen] = useState(false);
   const [dontShowAgain, setDontShowAgain] = useState(false);
@@ -99,13 +96,20 @@ export default function WelcomeVideo() {
               </div>
 
               <div className="videoFrame">
-                <iframe
-                  src={VIDEO_URL}
-                  title="FBS IDX AI Knowledge Platform introduction"
-                  allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+  <video
+    controls
+    autoPlay
+    playsInline
+    style={{
+      width: "100%",
+      height: "100%",
+      border: "none"
+    }}
+  >
+    <source src="/intro.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
               <div className="videoModalFooter">
                 <label className="dontShowAgain">
