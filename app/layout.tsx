@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles.css";
 import "./enhancements.css";
 import "./redesign.css";
+import "./customize.css";
 
 export const metadata: Metadata = {
   title: "BAS AI Knowledge Platform",
