@@ -1,5 +1,6 @@
 import SearchClient from "../components/SearchClient";
 import { knowledgeItems, metrics } from "../lib/data";
+import WelcomeVideo from "../components/WelcomeVideo";
 
 const mostUsed = knowledgeItems.filter((item) => item.type === "Skill").slice(0, 3);
 const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 4);
