@@ -1,7 +1,6 @@
 import PlatformControls from "../components/PlatformControls";
 import ResourceShelf from "../components/ResourceShelf";
 import SearchClient from "../components/SearchClient";
-import SearchLauncher from "../components/SearchLauncher";
 import WelcomeVideo from "../components/WelcomeVideo";
 import { knowledgeItems, metrics } from "../lib/data";
 
@@ -14,20 +13,13 @@ export default function Home() {
       <div className="ambient ambientOne" aria-hidden="true" />
       <div className="ambient ambientTwo" aria-hidden="true" />
 
-      <nav className="topbar" aria-label="Platform navigation">
-        <a className="brand" href="#top" aria-label="BAS AI home">
-          <span className="brandMark">F</span>
-          <span><strong>BAS AI</strong><small>Knowledge Platform</small></span>
-        </a>
-        <div className="topbarCenter"><SearchLauncher /></div>
-        <div className="topbarActions">
-          <WelcomeVideo />
-          <PlatformControls />
-        </div>
-      </nav>
+      <div className="floatingPlatformControls">
+        <WelcomeVideo />
+        <PlatformControls />
+      </div>
 
       <header className="hero" id="top">
-        <div className="heroBadge"><span>✦</span> FBS INTERNAL INTELLIGENCE</div>
+        <div className="heroBadge"><span>✦</span> FBS BAS AI · INTERNAL KNOWLEDGE</div>
         <h1>Knowledge, instantly<br /><span>within reach.</span></h1>
         <p>Ask natural-language questions across IDX requirements, MLS compliance, SmartFrame, Spark API, sales guidance, and BAS procedures.</p>
       </header>
