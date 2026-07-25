@@ -19,7 +19,7 @@ const quickCommands = [
   { title: "Prepare an escalation", detail: "Collect evidence before escalating", query: "IDX escalation evidence" }
 ];
 
-type IconName = "sliders" | "close" | "play" | "search" | "keyboard" | "moon" | "sun" | "book" | "trash" | "arrow" | "check";
+type IconName = "sliders" | "close" | "play" | "search" | "keyboard" | "book" | "trash" | "arrow" | "check";
 
 type SettingRowProps = {
   icon: IconName;
@@ -38,8 +38,6 @@ function Icon({ name }: { name: IconName }) {
     play: <><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/></>,
     search: <><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></>,
     keyboard: <><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M19 10h.01M7 14h8M17 14h2"/></>,
-    moon: <path d="M20 15.2A8 8 0 0 1 8.8 4a8 8 0 1 0 11.2 11.2Z"/>,
-    sun: <><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></>,
     book: <><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5A2.5 2.5 0 0 1 20 21.5Z"/></>,
     trash: <><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></>,
     arrow: <><path d="M7 17 17 7M9 7h8v8"/></>,
@@ -68,7 +66,6 @@ export default function PlatformControls() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteQuery, setPaletteQuery] = useState("");
   const [notice, setNotice] = useState("");
-  const [isDark, setIsDark] = useState(false);
   const [accent, setAccent] = useState("blue");
   const panelRef = useRef<HTMLElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -81,12 +78,10 @@ export default function PlatformControls() {
   }, [paletteQuery]);
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem("fbs-theme");
-    const dark = savedTheme ? savedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedAccent = window.localStorage.getItem("fbs-accent") || "blue";
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    document.documentElement.dataset.theme = "light";
     document.documentElement.dataset.accent = savedAccent;
-    setIsDark(dark);
+    window.localStorage.setItem("fbs-theme", "light");
     setAccent(savedAccent);
 
     const handleKey = (event: KeyboardEvent) => {
@@ -121,12 +116,6 @@ export default function PlatformControls() {
     window.setTimeout(() => triggerRef.current?.focus(), 0);
   };
   const runQuery = (query: string) => { window.dispatchEvent(new CustomEvent("run-platform-search", { detail: query })); setPaletteOpen(false); };
-  const toggleTheme = () => {
-    const next = !isDark;
-    setIsDark(next);
-    document.documentElement.dataset.theme = next ? "dark" : "light";
-    window.localStorage.setItem("fbs-theme", next ? "dark" : "light");
-  };
   const chooseAccent = (name: string) => {
     setAccent(name);
     document.documentElement.dataset.accent = name;
@@ -152,15 +141,6 @@ export default function PlatformControls() {
           <h2 id="accent-heading" className="settingsSectionTitle">Accent color</h2>
           <div className="colorGrid" aria-label="Platform accent color">
             {colors.map(([name, label, hex]) => <button key={name} className="colorChoice" style={{ "--swatch": hex } as CSSProperties} type="button" aria-label={`${label} accent`} aria-pressed={accent === name} onClick={() => chooseAccent(name)}>{accent === name && <Icon name="check" />}</button>)}
-          </div>
-        </section>
-
-        <section className="settingsSection" aria-labelledby="appearance-heading">
-          <h2 id="appearance-heading" className="settingsSectionTitle">Appearance</h2>
-          <div className="themeRow">
-            <span className="settingsIcon"><Icon name={isDark ? "moon" : "sun"} /></span>
-            <span className="settingsCopy"><strong>Dark mode</strong><small>{isDark ? "Dark appearance is enabled" : "Use a darker interface"}</small></span>
-            <button className="themeSwitch" type="button" role="switch" aria-checked={isDark} aria-label="Toggle dark mode" onClick={toggleTheme} />
           </div>
         </section>
 
