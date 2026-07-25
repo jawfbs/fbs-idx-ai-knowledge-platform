@@ -28,7 +28,8 @@ body {
 }
 
 main {
-  width: min(1440px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
   padding: 28px 0 70px;
 }
 
@@ -119,7 +120,8 @@ main {
 .contentHeading,
 .guide,
 footer {
-  width: min(1180px, calc(100% - 48px));
+  width: 100%;
+  margin-inline: auto;
 }
 
 .promptLibrary {
@@ -257,8 +259,9 @@ footer {
   main { width: calc(100% - 20px); padding-top: 10px; }
   .hero { min-height: 500px; padding: 42px 24px 100px; border-radius: 24px; }
   .hero h1 { font-size: clamp(50px, 16vw, 78px); }
-  .searchShell { width: calc(100% - 24px); margin-top: -76px; }
-  .promptLibrary, .resourceShelf, .metrics, .twoColumn, .contentHeading, .guide, footer { width: calc(100% - 12px); }
+  .searchShell { width: 100%;
+max-width: 1080px; }
+
   .floatingPlatformControls { left: 12px; bottom: 12px; }
   .settingsPanel { left: 10px; bottom: 10px; width: calc(100vw - 20px); max-height: calc(100vh - 20px); }
   .controlOrb::after { display: none; }
