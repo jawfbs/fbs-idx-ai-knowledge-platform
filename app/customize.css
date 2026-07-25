@@ -187,3 +187,247 @@
     position: static;
   }
 }
+
+
+/* Bigger panel */
+.settingsPanel {
+  width: min(420px, 100vw);
+  padding: 20px 18px 28px;
+}
+
+/* Close button - top right */
+.settingsClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.15s, color 0.15s;
+}
+
+.settingsClose:hover {
+  background: var(--border-soft);
+  color: var(--text-primary);
+}
+
+.settingsClose svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Backdrop */
+.settingsBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.28);
+  z-index: 80;
+}
+
+/* Make sure panel sits above backdrop */
+.settingsPanel {
+  position: relative;
+  z-index: 90;
+}
+
+/* Cleaner, smaller cards */
+.settingsPanel .settingsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+}
+
+.settingsPanel .settingsRow {
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface-subtle) 72%, transparent);
+  color: var(--text-primary);
+  text-align: left;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.settingsPanel .settingsRow:hover,
+.settingsPanel .settingsRow:focus-visible {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border-soft));
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface-solid));
+}
+
+.settingsPanel .settingsIcon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.settingsPanel .settingsIcon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.settingsPanel .settingsCopy strong {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.settingsPanel .settingsCopy small {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.settingsPanel .settingsMeta {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Color dots */
+.colorGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 4px 0 2px;
+}
+
+.colorChoice {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--swatch);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: white;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.colorChoice:hover {
+  transform: scale(1.08);
+}
+
+.colorChoice.is-selected,
+.colorChoice[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--surface-solid), 0 0 0 4px var(--swatch);
+}
+
+.colorChoice svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* Button position options */
+.positionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.positionChoice {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: color-mix(in srgb, var(--surface-subtle) 70%, transparent);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.positionChoice:hover {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border-soft));
+}
+
+.positionChoice.is-selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface-solid));
+  color: var(--accent);
+}
+
+/* Floating button positions */
+.settingsWrap {
+  position: fixed;
+  z-index: 70;
+}
+
+.settingsWrap.position-top-left {
+  top: 20px;
+  left: 20px;
+  bottom: auto;
+  right: auto;
+}
+
+.settingsWrap.position-top-right {
+  top: 20px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+}
+
+.settingsWrap.position-bottom-left {
+  bottom: 20px;
+  left: 20px;
+  top: auto;
+  right: auto;
+}
+
+.settingsWrap.position-bottom-right {
+  bottom: 20px;
+  right: 20px;
+  top: auto;
+  left: auto;
+}
+
+/* Section spacing */
+.settingsSectionTitle {
+  margin: 18px 2px 10px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.settingsSection:first-of-type .settingsSectionTitle {
+  margin-top: 8px;
+}
+
+/* Mobile */
+@media (max-width: 430px) {
+  .settingsPanel .settingsList {
+    grid-template-columns: 1fr;
+  }
+
+  .settingsPanel .settingsRow {
+    min-height: 64px;
+  }
+}
