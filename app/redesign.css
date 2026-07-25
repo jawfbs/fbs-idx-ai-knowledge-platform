@@ -36,12 +36,12 @@ main {
 .hero {
   position: relative;
   max-width: none;
-  min-height: 560px;
+  min-height: 480px;
   margin: 0 auto 26px;
   display: grid;
   align-content: center;
   justify-items: start;
-  padding: clamp(44px, 8vw, 100px);
+  padding: clamp(34px, 6vw, 72px);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border-soft));
   border-radius: 34px;
@@ -53,16 +53,7 @@ main {
 }
 
 .hero::before {
-  content: "BAS";
-  position: absolute;
-  right: -1vw;
-  bottom: -8vw;
-  color: color-mix(in srgb, var(--accent) 7%, transparent);
-  font-size: clamp(180px, 30vw, 480px);
-  font-weight: 950;
-  line-height: .72;
-  letter-spacing: -.1em;
-  pointer-events: none;
+  content: none;
 }
 
 .heroBadge {
@@ -77,7 +68,7 @@ main {
   position: relative;
   z-index: 1;
   max-width: 900px;
-  margin: 24px 0 22px;
+  margin: 20px 0 18px;
   font-size: clamp(58px, 8vw, 118px);
   line-height: .88;
   letter-spacing: -.075em;
@@ -257,10 +248,9 @@ footer {
 
 @media (max-width: 700px) {
   main { width: calc(100% - 20px); padding-top: 10px; }
-  .hero { min-height: 500px; padding: 42px 24px 100px; border-radius: 24px; }
+  .hero { min-height: 440px; padding: 32px 24px 82px; border-radius: 24px; }
   .hero h1 { font-size: clamp(50px, 16vw, 78px); }
-  .searchShell { width: 100%;
-max-width: 1080px; }
+  .searchShell { width: 100%; max-width: 1080px; }
 
   .floatingPlatformControls { left: 12px; bottom: 12px; }
   .settingsPanel { left: 10px; bottom: 10px; width: calc(100vw - 20px); max-height: calc(100vh - 20px); }
