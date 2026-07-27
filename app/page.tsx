@@ -1,3 +1,4 @@
+import CommandPalette from "../components/CommandPalette";
 import PlatformControls from "../components/PlatformControls";
 import ResourceShelf from "../components/ResourceShelf";
 import SearchClient from "../components/SearchClient";
@@ -28,6 +29,7 @@ export default function Home() {
       <div className="ambient ambientTwo" aria-hidden="true" />
 
       <div className="floatingPlatformControls">
+        <CommandPalette />
         <WelcomeVideo />
         <PlatformControls />
       </div>
