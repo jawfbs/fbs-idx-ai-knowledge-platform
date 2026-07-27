@@ -5,7 +5,7 @@ import ResourceShelf from "../components/ResourceShelf";
 import SearchClient from "../components/SearchClient";
 import WelcomeVideo from "../components/WelcomeVideo";
 import { knowledgeItems, metrics } from "../lib/data";
-import { defaultSources } from "../lib/platformConfig";
+import { defaultRoutes, defaultSources } from "../lib/platformConfig";
 
 const mostUsed = knowledgeItems.filter((item) => item.type === "Skill").slice(0, 3);
 const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 4);
@@ -25,6 +25,9 @@ const quickActions = [
 ];
 
 export default function Home() {
+  const healthySources = defaultSources.filter((source) => source.enabled && source.health === "Healthy").length;
+  const enabledRoutes = defaultRoutes.filter((route) => route.enabled).length;
+
   return (
     <main>
       <div className="ambient ambientOne" aria-hidden="true" />
@@ -41,10 +44,11 @@ export default function Home() {
         <div className="workspaceNavLinks">
           <a href="#workspace">Workspace</a>
           <a href="#operations">Operations</a>
-          <a href="#sources">Sources</a>
-          <a href="#activity">Activity</a>
+          <a href="/sources">Sources</a>
+          <a href="/routes">Routes</a>
+          <a href="/analytics">Analytics</a>
         </div>
-        <div className="workspaceStatus"><span /> Systems connected</div>
+        <div className="workspaceStatus"><span /> {healthySources}/{defaultSources.length} sources healthy</div>
       </nav>
 
       <header className="hero" id="top">
@@ -54,8 +58,8 @@ export default function Home() {
           <p>One intelligent workspace for Flexmls, IDX requirements, compliance, sales guidance, internal procedures, and current source-backed answers.</p>
           <div className="heroMeta">
             <span><b>{metrics.totalSkills}</b> active skills</span>
-            <span><b>{knowledgeItems.length}</b> indexed sources</span>
-            <span><b>{metrics.averageQualityScore.toFixed(1)}</b> quality score</span>
+            <span><b>{defaultSources.length}</b> registered sources</span>
+            <span><b>{enabledRoutes}</b> active routes</span>
           </div>
         </div>
 
@@ -108,8 +112,8 @@ export default function Home() {
 
       <section className="metrics" aria-label="Knowledge platform metrics" id="activity">
         <article><span className="metricIcon">✦</span><strong>{metrics.totalSkills}</strong><span>AI Skills</span><small>Curated workflows</small></article>
-        <article><span className="metricIcon">◫</span><strong>{knowledgeItems.length}</strong><span>Indexed Sources</span><small>Searchable guidance</small></article>
-        <article><span className="metricIcon">◎</span><strong>{metrics.averageQualityScore.toFixed(1)}</strong><span>Quality Score</span><small>Reviewed knowledge</small></article>
+        <article><span className="metricIcon">◫</span><strong>{defaultSources.length}</strong><span>Registered Sources</span><small>{healthySources} healthy and enabled</small></article>
+        <article><span className="metricIcon">◎</span><strong>{enabledRoutes}</strong><span>Active Routes</span><small>Configured question paths</small></article>
         <article><span className="metricIcon">↻</span><strong>{metrics.dueForReview}</strong><span>Review Queue</span><small>Items due for review</small></article>
       </section>
 
