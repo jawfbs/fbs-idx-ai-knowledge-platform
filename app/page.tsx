@@ -47,6 +47,7 @@ export default function Home() {
           <a href="/sources">Sources</a>
           <a href="/routes">Routes</a>
           <a href="/analytics">Analytics</a>
+          <a href="/automations">Automations</a>
         </div>
         <div className="workspaceStatus"><span /> {healthySources}/{defaultSources.length} sources healthy</div>
       </nav>
