@@ -3,6 +3,7 @@ import "./styles.css";
 import "./enhancements.css";
 import "./redesign.css";
 import "./workspace.css";
+import "./mission-control.css";
 import "./customize.css";
 
 export const metadata: Metadata = {
