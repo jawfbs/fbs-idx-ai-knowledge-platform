@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Help Router"
+  short_description: "Route Flexmls help questions to current MCP documentation"
+  brand_color: "#2563EB"
