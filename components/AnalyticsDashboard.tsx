@@ -49,7 +49,7 @@ export default function AnalyticsDashboard() {
   return <div className="analyticsShell">
     <header className="analyticsHeader">
       <div><span className="sectionKicker">INTELLIGENCE CONTROL CENTER</span><h1>Search Analytics</h1><p>Live operational insight into questions, routes, connectors, confidence, performance, and knowledge gaps.</p></div>
-      <div className="analyticsHeaderActions"><a href="/">← Workspace</a><button type="button" onClick={() => clearSearchEvents()} disabled={!events.length}>Clear local data</button></div>
+      <div className="analyticsHeaderActions"><a href="/">← Workspace</a><a href="/automations">Automations</a><button type="button" onClick={() => clearSearchEvents()} disabled={!events.length}>Clear local data</button></div>
     </header>
 
     <section className="analyticsMetricGrid">
