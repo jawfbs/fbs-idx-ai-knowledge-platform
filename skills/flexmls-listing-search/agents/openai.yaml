@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Listing Search"
+  short_description: "Search current Flexmls listings from natural language"
+  brand_color: "#2563EB"
