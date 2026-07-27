@@ -4,6 +4,7 @@ import "./enhancements.css";
 import "./redesign.css";
 import "./workspace.css";
 import "./mission-control.css";
+import "./admin.css";
 import "./customize.css";
 
 export const metadata: Metadata = {
