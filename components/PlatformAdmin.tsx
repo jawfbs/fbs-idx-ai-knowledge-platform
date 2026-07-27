@@ -83,7 +83,7 @@ export default function PlatformAdmin({ mode }: { mode: Mode }) {
   return <main className="adminShell">
     <nav className="adminNav">
       <a className="workspaceBrand" href="/"><span>FBS</span><b>Knowledge Admin</b></a>
-      <div><a className={mode === "sources" ? "active" : ""} href="/sources">Knowledge Sources</a><a className={mode === "routes" ? "active" : ""} href="/routes">Prompt Routes</a><a href="/analytics">Analytics</a></div>
+      <div><a className={mode === "sources" ? "active" : ""} href="/sources">Knowledge Sources</a><a className={mode === "routes" ? "active" : ""} href="/routes">Prompt Routes</a><a href="/analytics">Analytics</a><a href="/automations">Automations</a></div>
       <a href="/">Workspace ↗</a>
     </nav>
 
