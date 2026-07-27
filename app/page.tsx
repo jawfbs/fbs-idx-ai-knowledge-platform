@@ -1,9 +1,11 @@
 import CommandPalette from "../components/CommandPalette";
+import MissionControlDashboard from "../components/MissionControlDashboard";
 import PlatformControls from "../components/PlatformControls";
 import ResourceShelf from "../components/ResourceShelf";
 import SearchClient from "../components/SearchClient";
 import WelcomeVideo from "../components/WelcomeVideo";
 import { knowledgeItems, metrics } from "../lib/data";
+import { defaultSources } from "../lib/platformConfig";
 
 const mostUsed = knowledgeItems.filter((item) => item.type === "Skill").slice(0, 3);
 const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 4);
@@ -38,6 +40,7 @@ export default function Home() {
         <a className="workspaceBrand" href="#top"><span>FBS</span><b>Knowledge</b></a>
         <div className="workspaceNavLinks">
           <a href="#workspace">Workspace</a>
+          <a href="#operations">Operations</a>
           <a href="#sources">Sources</a>
           <a href="#activity">Activity</a>
         </div>
@@ -73,6 +76,8 @@ export default function Home() {
         <div className="searchHints"><span>Try:</span><button>Why can’t a user edit a listing?</button><button>Where is this IDX setting?</button><button>Which product should I recommend?</button></div>
       </section>
 
+      <MissionControlDashboard items={knowledgeItems} sources={defaultSources} />
+
       <section className="workspaceGrid">
         <div className="workspaceMain">
           <section className="quickActions" aria-label="Quick actions">
@@ -97,7 +102,7 @@ export default function Home() {
               <article key={title}><div><span>{source}</span><h3>{title}</h3><p>{description}</p></div><b>↗</b></article>
             ))}
           </div>
-          <a className="routePanelLink" href="#top">View all prompt routes <span>↗</span></a>
+          <a className="routePanelLink" href="/routes">View all prompt routes <span>↗</span></a>
         </aside>
       </section>
 
