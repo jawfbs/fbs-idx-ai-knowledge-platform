@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Route Tester"
+  short_description: "Test routing accuracy and coverage"
+  brand_color: "#0057B8"

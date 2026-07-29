@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Support Response"
+  short_description: "Create verified customer-ready IDX responses"
+  brand_color: "#0057B8"

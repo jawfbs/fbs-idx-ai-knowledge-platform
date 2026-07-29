@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Escalation Builder"
+  short_description: "Prepare complete IDX escalations"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Platform Status Report"
+  short_description: "Report platform health and progress"
+  brand_color: "#0057B8"

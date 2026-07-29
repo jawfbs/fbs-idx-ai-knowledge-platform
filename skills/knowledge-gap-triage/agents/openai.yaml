@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Gap Triage"
+  short_description: "Prioritize unresolved knowledge gaps"
+  brand_color: "#0057B8"

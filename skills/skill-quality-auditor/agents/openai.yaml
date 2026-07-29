@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Quality Auditor"
+  short_description: "Audit skill quality and readiness"
+  brand_color: "#0057B8"

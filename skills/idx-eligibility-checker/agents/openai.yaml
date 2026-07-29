@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Eligibility Checker"
+  short_description: "Check customer and MLS IDX eligibility"
+  brand_color: "#0057B8"

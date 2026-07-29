@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conflict Resolution Reviewer"
+  short_description: "Prepare reviews for conflicting guidance"
+  brand_color: "#0057B8"

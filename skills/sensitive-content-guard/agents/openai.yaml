@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sensitive Content Guard"
+  short_description: "Prevent sensitive data disclosure"
+  brand_color: "#0057B8"

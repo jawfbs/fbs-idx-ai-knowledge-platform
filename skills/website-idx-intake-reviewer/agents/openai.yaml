@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website IDX Intake Reviewer"
+  short_description: "Review website and IDX intake readiness"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Queue Manager"
+  short_description: "Prioritize and assign knowledge reviews"
+  brand_color: "#0057B8"

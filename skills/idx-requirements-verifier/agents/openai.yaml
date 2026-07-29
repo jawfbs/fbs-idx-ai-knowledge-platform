@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Requirements Verifier"
+  short_description: "Verify current MLS-specific IDX rules"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search Analytics Reporter"
+  short_description: "Report search usage and failure patterns"
+  brand_color: "#0057B8"

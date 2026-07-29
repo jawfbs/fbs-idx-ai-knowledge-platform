@@ -1,0 +1,4 @@
+interface:
+  display_name: "Suggested Question Generator"
+  short_description: "Generate useful guided search prompts"
+  brand_color: "#0057B8"

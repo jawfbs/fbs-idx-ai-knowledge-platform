@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Authorization Validator"
+  short_description: "Validate IDX approvals and ownership"
+  brand_color: "#0057B8"

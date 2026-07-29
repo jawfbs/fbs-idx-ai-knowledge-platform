@@ -1,0 +1,4 @@
+interface:
+  display_name: "Missing Listing Troubleshooter"
+  short_description: "Diagnose missing IDX and Flexmls listings"
+  brand_color: "#0057B8"
