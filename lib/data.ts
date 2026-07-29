@@ -1,3 +1,5 @@
+import skillRegistry from "../skills/registry.json";
+
 export type KnowledgeItem = {
   title: string;
   type: "Skill" | "Decision Tree" | "Case" | "Guide" | "Reference";
@@ -128,14 +130,13 @@ export const knowledgeItems: KnowledgeItem[] = [
   }
 ];
 
-const skills = knowledgeItems.filter((item) => item.type === "Skill");
 const cases = knowledgeItems.filter((item) => item.type === "Case");
 const approvedItems = knowledgeItems.filter((item) => item.status === "Approved");
 const inReviewItems = knowledgeItems.filter((item) => item.status === "In Review");
 const draftItems = knowledgeItems.filter((item) => item.status === "Draft");
 
 export const metrics = {
-  totalSkills: skills.length,
+  totalSkills: skillRegistry.skillCount,
   totalCases: cases.length,
   averageQualityScore: 9.2,
   dueForReview: inReviewItems.length,
