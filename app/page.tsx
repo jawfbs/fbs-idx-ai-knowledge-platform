@@ -13,6 +13,7 @@ const recent = [...knowledgeItems].sort((a, b) => b.updated.localeCompare(a.upda
 const routes = [
   ["Flexmls Help", "MCP", "Current product guidance"],
   ["IDX Requirements", "Confluence", "MLS rules and compliance"],
+  ["FBS Playbook", "Confluence", "Internal SOPs, policies, and strategy"],
   ["Sales Guidance", "Drive", "Approved positioning and pricing"],
   ["Platform Skills", "GitHub", "Reusable AI workflows"]
 ];
