@@ -48,7 +48,9 @@ function read<T>(key: string, defaults: T[]): T[] {
   if (typeof window === "undefined") return defaults;
   try {
     const parsed = JSON.parse(window.localStorage.getItem(key) || "null");
-    return Array.isArray(parsed) ? parsed : defaults;
+    if (!Array.isArray(parsed)) return defaults;
+    const savedById = new Map(parsed.filter((item): item is T & { id: string } => Boolean(item && typeof item.id === "string")).map((item) => [item.id, item]));
+    return defaults.map((item) => savedById.get((item as { id?: string }).id || "") || item).concat(parsed.filter((item) => !defaults.some((defaultItem) => (defaultItem as { id?: string }).id === (item as { id?: string }).id)));
   } catch {
     return defaults;
   }
