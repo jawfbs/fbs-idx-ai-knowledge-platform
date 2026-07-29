@@ -7,6 +7,7 @@ type SavedResource = { title: string; href: string; type: string };
 
 const pinnedDefaults: SavedResource[] = [
   { title: "IDX Requirements", href: "https://fbsdata.atlassian.net/wiki/spaces/BAS/pages/3473901/IDX+Requirements", type: "Confluence" },
+  { title: "FBS Playbook", href: "https://fbsdata.atlassian.net/wiki/spaces/FBSPB/overview?homepageId=535658840", type: "Confluence" },
   { title: "IDX Product Recommendation", href: "https://docs.google.com/document/d/1KyvSOEOvsaXs3KyY0KVV87BHzuYU2dNl4PtHg8iMz88", type: "Decision Tree" },
   { title: "All Decision Trees", href: "https://drive.google.com/drive/folders/1RkV5Ydd1jHC794ZCWt_kzYbRT0hOC2ke", type: "Google Drive" },
   { title: "Platform Guide", href: "https://docs.google.com/document/d/1FH0JT6n5Pc1aP-GBFMlql5EjBjWT5dsePGyo6YfysU8", type: "Guide" }
