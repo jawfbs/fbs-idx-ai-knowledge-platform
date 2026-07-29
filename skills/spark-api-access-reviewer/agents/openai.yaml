@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spark API Access Reviewer"
+  short_description: "Review Spark API access readiness"
+  brand_color: "#EA580C"

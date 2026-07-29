@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Renewal Risk Detector"
+  short_description: "Identify IDX retention risks early"
+  brand_color: "#0F766E"

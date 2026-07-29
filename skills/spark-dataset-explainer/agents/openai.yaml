@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spark Dataset Explainer"
+  short_description: "Explain Spark API dataset choices"
+  brand_color: "#EA580C"

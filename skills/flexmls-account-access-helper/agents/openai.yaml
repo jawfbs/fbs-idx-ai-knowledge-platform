@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Account Access Helper"
+  short_description: "Troubleshoot Flexmls access issues"
+  brand_color: "#7C3AED"

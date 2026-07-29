@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Proposal Reviewer"
+  short_description: "Review proposals before customer delivery"
+  brand_color: "#2563EB"

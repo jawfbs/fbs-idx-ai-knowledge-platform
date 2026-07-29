@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spark API Error Troubleshooter"
+  short_description: "Diagnose Spark API failures"
+  brand_color: "#EA580C"

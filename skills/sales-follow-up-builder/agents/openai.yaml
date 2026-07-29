@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Follow-Up Builder"
+  short_description: "Create accurate post-call follow-ups"
+  brand_color: "#2563EB"

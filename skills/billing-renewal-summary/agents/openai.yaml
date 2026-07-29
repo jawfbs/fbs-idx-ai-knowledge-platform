@@ -1,0 +1,4 @@
+interface:
+  display_name: "Billing Renewal Summary"
+  short_description: "Summarize subscription renewals"
+  brand_color: "#15803D"

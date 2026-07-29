@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automation Opportunity Finder"
+  short_description: "Find high-value automation opportunities"
+  brand_color: "#0891B2"

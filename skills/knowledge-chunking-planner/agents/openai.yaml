@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Chunking Planner"
+  short_description: "Plan reliable knowledge chunking"
+  brand_color: "#334155"

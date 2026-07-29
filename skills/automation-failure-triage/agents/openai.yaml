@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automation Failure Triage"
+  short_description: "Diagnose failed automations safely"
+  brand_color: "#0891B2"

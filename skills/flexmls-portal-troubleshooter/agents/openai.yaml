@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Portal Troubleshooter"
+  short_description: "Resolve Flexmls portal problems"
+  brand_color: "#7C3AED"

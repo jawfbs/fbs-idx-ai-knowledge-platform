@@ -1,0 +1,4 @@
+interface:
+  display_name: "Billing Subscription Auditor"
+  short_description: "Audit customer subscription records"
+  brand_color: "#15803D"

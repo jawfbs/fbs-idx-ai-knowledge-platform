@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Activation Readiness"
+  short_description: "Check IDX activation prerequisites"
+  brand_color: "#0F766E"

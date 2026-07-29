@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Ingestion Validator"
+  short_description: "Validate sources before ingestion"
+  brand_color: "#334155"

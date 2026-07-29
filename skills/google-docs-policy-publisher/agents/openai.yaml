@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Docs Policy Publisher"
+  short_description: "Publish structured policy documents"
+  brand_color: "#4285F4"

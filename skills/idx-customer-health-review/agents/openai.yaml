@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Customer Health Review"
+  short_description: "Assess IDX customer health and risk"
+  brand_color: "#0F766E"

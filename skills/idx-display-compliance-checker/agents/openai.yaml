@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Display Compliance Checker"
+  short_description: "Review IDX displays for compliance"
+  brand_color: "#0F766E"

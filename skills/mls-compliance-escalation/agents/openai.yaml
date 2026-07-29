@@ -1,0 +1,4 @@
+interface:
+  display_name: "MLS Compliance Escalation"
+  short_description: "Prepare MLS compliance escalations"
+  brand_color: "#B91C1C"

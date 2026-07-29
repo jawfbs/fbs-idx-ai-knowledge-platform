@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Backlog Triage"
+  short_description: "Prioritize and clean Jira backlogs"
+  brand_color: "#0052CC"

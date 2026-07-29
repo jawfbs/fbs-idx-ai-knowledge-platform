@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confluence Space Onboarding"
+  short_description: "Register Confluence knowledge spaces"
+  brand_color: "#0052CC"

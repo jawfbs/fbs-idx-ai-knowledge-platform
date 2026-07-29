@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Notification Troubleshooter"
+  short_description: "Diagnose Flexmls notification issues"
+  brand_color: "#7C3AED"

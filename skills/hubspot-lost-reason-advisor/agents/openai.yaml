@@ -1,0 +1,4 @@
+interface:
+  display_name: "HubSpot Lost Reason Advisor"
+  short_description: "Standardize lost and cancellation reasons"
+  brand_color: "#F97316"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Billing Dispute Prep"
+  short_description: "Prepare evidence-based billing reviews"
+  brand_color: "#15803D"

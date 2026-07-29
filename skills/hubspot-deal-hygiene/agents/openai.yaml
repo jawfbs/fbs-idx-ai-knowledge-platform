@@ -1,0 +1,4 @@
+interface:
+  display_name: "HubSpot Deal Hygiene"
+  short_description: "Clean and prioritize HubSpot deals"
+  brand_color: "#F97316"

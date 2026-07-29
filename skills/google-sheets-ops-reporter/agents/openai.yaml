@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Sheets Ops Reporter"
+  short_description: "Create validated operations reports"
+  brand_color: "#4285F4"

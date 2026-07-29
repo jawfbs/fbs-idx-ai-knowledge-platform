@@ -1,0 +1,4 @@
+interface:
+  display_name: "MLS Rule Change Monitor"
+  short_description: "Assess impacts of MLS rule changes"
+  brand_color: "#B91C1C"

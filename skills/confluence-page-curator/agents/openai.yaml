@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confluence Page Curator"
+  short_description: "Improve Confluence knowledge quality"
+  brand_color: "#0052CC"

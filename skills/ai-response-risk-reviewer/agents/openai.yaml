@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Response Risk Reviewer"
+  short_description: "Review AI answers for business risk"
+  brand_color: "#9333EA"

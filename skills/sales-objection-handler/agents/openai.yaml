@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Objection Handler"
+  short_description: "Answer sales objections with evidence"
+  brand_color: "#2563EB"

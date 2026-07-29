@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDX Domain Change Coordinator"
+  short_description: "Plan safe IDX domain changes"
+  brand_color: "#0F766E"

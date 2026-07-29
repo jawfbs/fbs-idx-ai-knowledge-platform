@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Lead Qualifier"
+  short_description: "Qualify FBS opportunities consistently"
+  brand_color: "#2563EB"

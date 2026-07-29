@@ -1,0 +1,4 @@
+interface:
+  display_name: "HubSpot Follow-Up Queue"
+  short_description: "Prioritize CRM follow-up work"
+  brand_color: "#F97316"

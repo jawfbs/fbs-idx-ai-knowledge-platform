@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Search Builder"
+  short_description: "Build reliable Flexmls searches"
+  brand_color: "#7C3AED"

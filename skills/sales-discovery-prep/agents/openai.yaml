@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Discovery Prep"
+  short_description: "Prepare focused sales discovery briefs"
+  brand_color: "#2563EB"

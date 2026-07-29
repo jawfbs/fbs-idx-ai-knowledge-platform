@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Ticket Generator"
+  short_description: "Create complete actionable Jira issues"
+  brand_color: "#0052CC"

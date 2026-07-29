@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Drive Source Curator"
+  short_description: "Curate Drive knowledge sources"
+  brand_color: "#4285F4"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spark API Query Planner"
+  short_description: "Plan safe Spark API queries"
+  brand_color: "#EA580C"
