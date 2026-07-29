@@ -1,0 +1,4 @@
+interface:
+  display_name: "Answer Quality Validator"
+  short_description: "Validate answer evidence and safety"
+  brand_color: "#0057B8"

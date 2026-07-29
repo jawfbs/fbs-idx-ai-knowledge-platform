@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Permission Auditor"
+  short_description: "Audit knowledge source access"
+  brand_color: "#0057B8"

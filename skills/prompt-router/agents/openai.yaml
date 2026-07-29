@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Router"
+  short_description: "Route questions to the best workflow"
+  brand_color: "#0057B8"

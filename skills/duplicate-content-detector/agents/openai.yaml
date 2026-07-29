@@ -1,0 +1,4 @@
+interface:
+  display_name: "Duplicate Content Detector"
+  short_description: "Find duplicate and conflicting guidance"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Freshness Auditor"
+  short_description: "Find stale or superseded knowledge"
+  brand_color: "#0057B8"

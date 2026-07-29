@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Error Diagnosis"
+  short_description: "Diagnose Flexmls errors with current help"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Knowledge Search"
+  short_description: "Search approved internal FBS knowledge"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Support Case to Knowledge"
+  short_description: "Turn resolved cases into reusable guidance"
+  brand_color: "#0057B8"

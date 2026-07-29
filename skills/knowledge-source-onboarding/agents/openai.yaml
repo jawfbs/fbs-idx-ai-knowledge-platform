@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Source Onboarding"
+  short_description: "Register and test knowledge sources"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Registry Manager"
+  short_description: "Validate and publish platform skills"
+  brand_color: "#0057B8"

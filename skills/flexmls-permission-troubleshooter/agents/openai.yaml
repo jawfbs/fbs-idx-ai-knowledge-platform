@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Permission Troubleshooter"
+  short_description: "Resolve Flexmls access and edit issues"
+  brand_color: "#0057B8"

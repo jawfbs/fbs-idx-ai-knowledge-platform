@@ -1,0 +1,4 @@
+interface:
+  display_name: "Failed Search Recovery"
+  short_description: "Retry unanswered searches safely"
+  brand_color: "#0057B8"

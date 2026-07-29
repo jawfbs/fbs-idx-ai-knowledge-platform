@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Change Impact Reviewer"
+  short_description: "Find knowledge affected by releases"
+  brand_color: "#0057B8"

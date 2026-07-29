@@ -1,0 +1,4 @@
+interface:
+  display_name: "Connector Health Monitor"
+  short_description: "Check knowledge connector availability"
+  brand_color: "#0057B8"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Comparison Assistant"
+  short_description: "Compare FBS products by customer need"
+  brand_color: "#0057B8"

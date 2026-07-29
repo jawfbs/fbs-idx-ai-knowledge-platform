@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Usage Recommender"
+  short_description: "Recommend useful new platform skills"
+  brand_color: "#0057B8"

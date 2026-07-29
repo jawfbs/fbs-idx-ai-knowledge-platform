@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flexmls Subscription Explainer"
+  short_description: "Explain saved searches and subscriptions"
+  brand_color: "#0057B8"
